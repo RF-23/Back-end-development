@@ -1,0 +1,200 @@
+/*Setting the styles to 0% initially*/
+*{
+    padding: 0%;
+    margin: 0%;  
+}
+/*Navbar style is set to flex*/
+#navbar{
+    background-color: rgb(34, 200, 215);
+    display: flex;
+}
+/*Specifying logo image dimensions*/
+.logo{
+    width: 50%;
+    height: 10%;
+}
+/*Navbar menu styling*/
+.menu{
+margin-left: 10%;    
+}
+.menu-items{
+    display: flex;
+    list-style-type: none;/*Removing default list styling*/
+    transform: translate(285%,80%);/*Setting up the position for the menu-items*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    color: rgb(47, 94, 94);/*font-color*/
+}
+.menu-items li{
+    margin-inline-end: 25%;/*Profile will be 25% towards the left from the end*/
+}
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 92.13%;
+    background-image: url(./rightside-background-image.png);/*Importing background image*/
+    background: linear-gradient(90deg, rgb(48, 199, 212) 0%, rgba(31, 177, 191, 0.741) 35%, rgb(22, 173, 187));/*Adding a linear gradient composition as the background color*/
+}
+.box div{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 6px solid rgba(76, 231, 228, 0.677);
+    border-radius: 21%;
+}
+.box div:nth-child(1){
+    top: 12%;
+    left: 42%;
+    /*Setting smooth transition for an individual square*/
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(2){
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+.box div:nth-child(3){
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(4){
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(5){
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+.box div:nth-child(6){
+    top: 80%;
+    left: 70%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(7){
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+.box div:nth-child(8){
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+.box div:nth-child(9){
+    top: 89%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(10){
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+.box div:nth-child(11){
+    top: 40%;
+    left: 89%;
+    animation: animate 6s linear infinite;
+}
+.box div:nth-child(12){
+    top: 60%;
+    left: 92%;
+    animation: animate 1s linear infinite;
+}
+/*Animating all the boxes using the position property transform and also setting up the rotation*/
+@keyframes animate{
+    0%{
+        transform: scale(0%) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+#task-wrapper{
+    background-color: rgb(71, 204, 204);
+    border: 2px solid rgb(239, 233, 233);
+    width: 180px;
+    height: 50px;
+    transform: translate(365%,45%);
+    border-radius: 15px;
+}
+.to-do-list-type{
+    letter-spacing: 0.6 px;
+    margin-block-start: 7%;
+    margin-inline-start: 5%;
+    display: flex;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    font-size:larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.to-do-list-menu{
+    background-color: rgb(71, 204, 204);
+    border: 2px solid rgb(239, 233, 233);
+    width: 300px;
+    height: 290px;
+    transform: translate(-20%,10%);
+    border-radius: 15px;
+}
+.to-do-list{
+    margin-inline-start: 30%;
+    margin-block-start: 8%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 530;
+    font-size: large;
+}
+.to-do-list ul{
+    margin-block-end: 15%;
+}
+.to-do-list ul input[type="checkbox"]{
+    border-color: black;
+    appearance:inherit;
+    width: 13px;
+    height: 12px;
+    border: 2px solid #ccc; 
+    border-radius: 9px;
+    margin-top: 0%;
+    transition: border-color 0.3s ease;
+    margin-block-end: 0%;
+    margin-inline-end: 4%;
+}
+/*Once user clicks on the checkbox the below features will be activated*/
+.to-do-list ul input[type="checkbox"]:checked{
+   background-color: rgb(32, 154, 165); 
+}  
+.add-task {
+    margin-top: 35px;
+    display: flex;
+    transform: translateX(-23%);
+}
+.add-task input[type="text"] { 
+    list-style: none;
+    padding: 8%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 270px; 
+    margin-right: 10px;
+    background-color: #19b0b8;
+    text-emphasis-color: white;
+}
+.add-task button {
+    padding: 8px 16px;
+    background-color: #058187;
+    color: antiquewhite;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*Hover animations for the button*/
+.add-task button:hover {
+    background-color: #067177;
+}

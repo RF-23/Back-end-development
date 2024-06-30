@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png" alt="logo">
+    <title>To-do</title>
+</head>
+<body>
+    <div id="navbar">
+        <!--Left-side logo image on navbar-->
+        <div class="logo">
+            <img src="logo.png" style="height: 5%; width: 5%;" alt="Logo">
+        </div>
+        <div class="menu">
+            <ul class="menu-items">
+            <!--Right-side navlinks-->
+                <li class="menu-item-home">Home</li>
+                <li class="menu-item-about">About</li>
+                <li class="menu-item-profile">Profile</li>
+            </ul>
+        </div>
+    </div>
+    <!--Background animation-->
+    <div class="wrapper">
+        <!--Box contains each of the 12 squares described in the divs-->
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+        <!--Index page content-->
+        <div id="task-wrapper">
+            <!--Below div specifies the category of the to-do list-->
+            <div class="to-do-list-type">Home To - Do List</div>
+            <!--Wrapper class for each of the to-do list items in the menu-->
+            <div class="to-do-list-menu">
+                <!--Unordered checkbox list for all tasks-->
+                <div class="to-do-list">
+                    <ul>
+                        <input type="checkbox" name="one" id="task-one">
+                        Dispose trash
+                    </ul>
+                    <ul>
+                        <input type="checkbox" name="two" id="task-two">
+                        Revlew notes
+                    </ul>
+                    <ul>
+                        <input type="checkbox" name="three" id="task-three">
+                        Cook Lunch
+                    </ul>
+                    <ul>
+                        <input type="checkbox" name="four" id="task-four">
+                        Assign Tasks
+                    </ul>
+                    <ul>
+                        <input type="checkbox" name="five" id="task-five">
+                        Reply to mails
+                    </ul>
+                </div>
+            </div>
+            <!--input form for adding new task along with the button-->
+            <div class="add-task">
+                <input type="text" id="new-task" placeholder="Enter new task">
+                <button id="addTask">Add</button>
+            </div>
+        </div>
+</body>
+<script>
+    // Making sure DOM content is fully loaded before proceeding
+    document.addEventListener('DOMContentLoaded', function() {
+        // Accessing the input field of adding new task along button
+        const newTaskInput = document.getElementById('new-task');
+        const addButton = document.getElementById('addTask');
+
+        // Event listener to check when user clicks on button to print user input on console 
+        addButton.addEventListener('click', function() {
+            const userInput = newTaskInput.value;
+            console.log('User Input:', userInput);
+        });
+    });
+</script>
+
+</html>
