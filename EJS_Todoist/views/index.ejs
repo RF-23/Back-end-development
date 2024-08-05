@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todoist</title>
+    <link rel="stylesheet" href="./styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <!-- Form to add new tasks -->
+        <form action="/addtask" method="POST"> 
+            <!-- Input to add task -->
+            <input type="text" name="newtask" placeholder="Enter New Task">
+            <!-- Button to add new task and display below-->
+            <button type="submit">Add</button> 
+        </form>
+        <ul>
+            <!-- forEach loops through the tasks array to display all tasks -->
+            <% tasks.forEach(task => { %> 
+                <li>
+                    <%= task %> 
+                    <!-- Form to remove a task -->
+                    <form action="/removetask" method="POST" style="display:inline;">
+                        <!-- Hidden input to hold the task value seen in inspect as another li element --> 
+                        <input type="hidden" name="task" value="<%= task %>">
+                        <!-- Button to delete the task--> 
+                        <button type="submit" class="remove-btn">X</button> 
+                    </form>
+                </li>
+            <% }) %> 
+        </ul>
+    </div>
+</body>
+</html>
